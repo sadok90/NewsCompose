@@ -1,5 +1,6 @@
 package com.sadok.newscompose.presentation.onboarding.component
 
+import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,13 +24,14 @@ import com.sadok.newscompose.presentation.Dimens.PageIndicatorWidth
 import com.sadok.newscompose.presentation.common.NewsButton
 import com.sadok.newscompose.presentation.common.NewsTextButton
 import com.sadok.newscompose.presentation.common.PageIndicator
+import com.sadok.newscompose.presentation.onboarding.OnBoardingEvent
 import com.sadok.newscompose.presentation.onboarding.pages
 import kotlinx.coroutines.launch
 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(onEvent : (OnBoardingEvent) -> Unit) {
 
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
@@ -82,8 +84,8 @@ fun OnBoardingScreen() {
 
                 NewsButton(text = buttonState.value[1]) {
                     scope.launch {
-                        if (pagerState.currentPage == 3) {
-                            //Todo: Go to main screen
+                        if (pagerState.currentPage == 2) {
+                            onEvent(OnBoardingEvent.SaveAppEntry)
                         } else {
                             pagerState.animateScrollToPage(pagerState.currentPage + 1)
                         }
