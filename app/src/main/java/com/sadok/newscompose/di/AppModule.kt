@@ -1,12 +1,11 @@
 package com.sadok.newscompose.di
 
 import android.app.Application
-import com.sadok.newscompose.NewsApplication
 import com.sadok.newscompose.data.manager.LocalUserManagerImpl
 import com.sadok.newscompose.domain.manager.LocalUserManager
-import com.sadok.newscompose.domain.usecases.AppEntryUsesCase
-import com.sadok.newscompose.domain.usecases.ReadAppEntry
-import com.sadok.newscompose.domain.usecases.SaveAppEntry
+import com.sadok.newscompose.domain.usecases.app_entry.AppEntryUsesCase
+import com.sadok.newscompose.domain.usecases.app_entry.ReadAppEntry
+import com.sadok.newscompose.domain.usecases.app_entry.SaveAppEntry
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

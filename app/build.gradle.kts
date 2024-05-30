@@ -65,8 +65,12 @@ dependencies {
 
     implementation(libs.androidx.core.splashscreen)
     implementation (libs.accompanist.systemuicontroller)
+    //retrofit
+    implementation (libs.retrofit)
+
     //hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.paging.common.android)
     kapt(libs.hilt.android.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
 

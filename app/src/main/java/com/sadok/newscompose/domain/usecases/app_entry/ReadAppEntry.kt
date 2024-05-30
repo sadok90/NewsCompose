@@ -1,4 +1,4 @@
-package com.sadok.newscompose.domain.usecases
+package com.sadok.newscompose.domain.usecases.app_entry
 
 import com.sadok.newscompose.domain.manager.LocalUserManager
 import kotlinx.coroutines.flow.Flow
